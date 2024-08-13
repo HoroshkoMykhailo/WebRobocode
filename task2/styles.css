@@ -81,6 +81,12 @@ main {
     margin: 0 auto;
 }
 
+.about, .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
