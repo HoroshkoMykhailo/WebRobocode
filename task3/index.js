@@ -11,10 +11,24 @@ $(document).ready(function() {
     $('#add-item-form').submit(function(event) {
         event.preventDefault();
         let itemName = $('#item-name').val();
-        if (itemName) {
-            $('#custom-showcase').append(`<div class="item">${itemName}</div>`);
-            $('#item-name').val('');
+        let itemImgUrl = $('#item-img-url').val();
+        if (itemName && itemImgUrl) {
+            $('#custom-showcase').append(`
+                <div class="item">
+                    <img src="${itemImgUrl}" alt="${itemName}">
+                    <p>${itemName}</p>
+                </div>
+            `);
+            itemImgUrl = '';
         }
+        else if(itemName) {
+            $('#custom-showcase').append(`<div class="item"><p>${itemName}</p></div>`);
+        }
+        else{
+            alert("Enter product name");
+        }
+        $('#item-name').val('');
+        $('#item-img-url').val(`${itemImgUrl}`);
     });
 });
 
