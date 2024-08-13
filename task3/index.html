@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Electronic Showcase</h1>
+    </header>
+
+    <main>
+        <section id="showcase-1">
+            <h2>Showcase 1: Static</h2>
+            <div class="grid">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+            </div>
+        </section>
+
+        <section id="showcase-2">
+            <h2>Showcase 2: Interactive</h2>
+            <div class="grid interactive">
+                <div class="item" data-info="This is item 1">Item 1</div>
+                <div class="item" data-info="This is item 2">Item 2</div>
+                <div class="item" data-info="This is item 3">Item 3</div>
+                <div class="item" data-info="This is item 4">Item 4</div>
+            </div>
+            <div id="info-box"></div>
+        </section>
+
+        <section id="showcase-3">
+            <h2>Showcase 3: Add Object</h2>
+            <form id="add-item-form">
+                <input type="text" id="item-name" placeholder="Enter item name">
+                <button type="submit">Add Item</button>
+            </form>
+            <div class="grid" id="custom-showcase"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Electronic Showcase</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
